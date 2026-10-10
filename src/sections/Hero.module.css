@@ -1,0 +1,76 @@
+.hero {
+  background: var(--color-white);
+}
+
+
+.stage {
+  height: min(50.98vw, 881px);
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--color-yellow);
+}
+
+
+.canvas {
+  position: relative;
+  max-width: 1728px;
+  height: 100%;
+  margin-inline: auto;
+}
+
+
+.shapes {
+  position: absolute;
+  top: 0.155%;
+  left: 0.013%;
+  width: 92.7%;
+  height: 97.32%;
+  object-fit: cover;
+  object-position: left top;
+  pointer-events: none;
+}
+
+
+.title {
+  position: absolute;
+  top: 33.48%;
+  left: 50%;
+  width: 54.51%;
+  margin: 0;
+  transform: translateX(-50%);
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  line-height: var(--lh-hero);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+
+.hands {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: flex;
+  width: 42.48%;
+}
+
+.hands img {
+  flex: 1 1 0;
+  min-width: 0;
+  height: auto;
+}
+
+
+.scroll {
+  display: block;
+  width: 64px;
+  margin: clamp(16px, 2.083vw, 36px) auto 0;
+}
+
+.scroll img {
+  transition: transform 0.2s ease;
+}
+
+.scroll:hover img {
+  transform: translateY(4px);
+}

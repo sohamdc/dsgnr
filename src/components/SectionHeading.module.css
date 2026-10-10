@@ -1,0 +1,9 @@
+.heading {
+  margin: 0;
+  font-size: max(24px, calc(44 * var(--u)));
+  font-weight: 700;
+  line-height: 1;
+}
+
+.center { text-align: center; }
+.right { text-align: right; }

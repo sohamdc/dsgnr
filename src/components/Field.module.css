@@ -1,0 +1,77 @@
+.field {
+  position: relative;
+}
+
+.control {
+  display: block;
+  width: 100%;
+  height: max(calc(100 * var(--u)), 60px);
+  padding: calc(38 * var(--u)) calc(55 * var(--u)) 0;
+  border: 2px solid var(--color-field-border);
+  border-radius: 0;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-size: max(16px, calc(28 * var(--u)));
+  font-weight: 500;
+  line-height: 1.2;
+  transition: border-color 0.2s ease;
+}
+
+.textarea .control {
+  height: max(calc(191 * var(--u)), 120px);
+  padding-top: calc(52 * var(--u));
+  padding-bottom: calc(20 * var(--u));
+  resize: none;
+}
+
+.control:hover,
+.control:focus {
+  border-color: var(--color-ink);
+}
+
+.control[aria-invalid='true'] {
+  border-color: var(--color-error);
+}
+
+/* The label sits inside the box like Figma. When focused or filled it shrinks to the top. */
+.label {
+  position: absolute;
+  top: 50%;
+  left: calc(55 * var(--u));
+  transform: translateY(-50%);
+  font-size: max(16px, calc(28 * var(--u)));
+  font-weight: 500;
+  line-height: 1.2;
+  pointer-events: none;
+  transition: top 0.2s ease, transform 0.2s ease, font-size 0.2s ease;
+}
+
+.textarea .label {
+  top: calc(30 * var(--u));
+  transform: none;
+}
+
+.control:focus + .label,
+.control:not(:placeholder-shown) + .label {
+  top: calc(14 * var(--u));
+  transform: none;
+  font-size: max(12px, calc(18 * var(--u)));
+}
+
+/* Sits in the gap under the field, so showing an error never moves the layout */
+.error {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  margin: 0;
+  color: var(--color-error);
+  font-size: max(13px, calc(16 * var(--u)));
+  line-height: 1.25;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label,
+  .control {
+    transition: none;
+  }
+}

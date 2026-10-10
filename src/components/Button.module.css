@@ -1,0 +1,23 @@
+.button {
+  display: block;
+  width: 100%;
+  height: max(calc(100 * var(--u)), 56px);
+  border: 0;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: max(16px, calc(28 * var(--u)));
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover isn't designed in Figma: I chose the brand yellow */
+.button:hover:not(:disabled) {
+  background: var(--color-yellow);
+  color: var(--color-ink);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}

@@ -1,0 +1,61 @@
+/* Figma: the mouse icon ends at 981 and the form starts at 1077, so 96 */
+.contact {
+  padding-top: calc(96 * var(--u));
+}
+
+/* Columns 622 : 751 with a 155 gap = the 1528px content width */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 622fr) minmax(0, 751fr);
+  column-gap: calc(155 * var(--u));
+  align-items: start;
+}
+
+/* 622 x 891 cream card, 8px lower than the form column */
+.card {
+  position: relative;
+  margin-top: calc(8 * var(--u));
+  aspect-ratio: 622 / 891;
+  background: var(--color-cream);
+}
+
+/* Measured from the Figma export: 140px from the left, 160px from the top */
+.card img {
+  position: absolute;
+  top: 17.96%;
+  left: 22.51%;
+  width: 60.77%;
+  height: auto;
+}
+
+.headingBox {
+  max-width: calc(380 * var(--u));
+  min-height: calc(112 * var(--u));
+  margin: 0 0 calc(56 * var(--u)) auto;
+}
+
+/* flex + gap (not margins) so spacing never collapses */
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: max(calc(30 * var(--u)), 26px);
+}
+
+/* 30 gap + 20 = the 50px space above the button in Figma */
+.submit {
+  margin-top: calc(20 * var(--u));
+}
+
+/* Floats under the button, so it never pushes the Office section down */
+.status {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  margin: 0;
+  font-size: max(16px, calc(22 * var(--u)));
+  font-weight: 500;
+}
+
+.status[data-state='success'] { color: var(--color-success); }
+.status[data-state='error'] { color: var(--color-error); }

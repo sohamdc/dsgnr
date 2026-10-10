@@ -1,8 +1,20 @@
 :root {
   --color-ink: #101010;
+  --color-white: #ffffff;
+  --color-yellow: #FDCA09;
+  --color-yellow-shape: #FEBC0A;
+  --color-cream: #FEF1E0;
+  --color-field-border: #707070;
+  --color-link: #4589F7;
+  --color-ink-muted: rgb(16 16 16 / 0.5);
+  --color-stat: #FEC00A;
+  --color-error: #C62828;
+  --color-success: #1B7A3E;
  
     
-  --font-main: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-main: 'Albert Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+ 
+  --u: min(calc(100vw / 1728), 1px);
 
 
   --container-max: 1728px;
