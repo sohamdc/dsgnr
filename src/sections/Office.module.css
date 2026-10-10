@@ -1,9 +1,9 @@
-/* Contact ends at 1976 and the heading starts at 2128 */
+
 .office {
   padding-top: calc(152 * var(--u));
 }
 
-/* 44px heading, photo starts at 2273 */
+
 .photoWrap {
   position: relative;
   margin-top: calc(101 * var(--u));
@@ -15,8 +15,6 @@
   height: auto;
 }
 
-/* Figma: 381 x 437 card, 44px from the photo's left, 178px from its top.
-   Position and width are percentages of the photo, so the card scales with it. */
 .card {
   position: absolute;
   top: 26.29%;

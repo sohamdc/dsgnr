@@ -1,0 +1,52 @@
+
+.brands {
+  padding-top: calc(129 * var(--u));
+}
+
+
+.headingBox {
+  max-width: calc(840 * var(--u));
+  margin: 0 auto calc(129 * var(--u));
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: calc(1272 * var(--u));
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.cell {
+  display: grid;
+  place-items: center;
+  height: calc(240 * var(--u));
+  border-right: 2px solid var(--color-divider);
+  border-bottom: 2px solid var(--color-divider);
+  transition: background 0.2s ease;
+}
+
+.cell:nth-child(4n) { border-right: 0; }
+.cell:nth-child(n + 5) { border-bottom: 0; }
+
+.cell:hover,
+.cell:focus-within {
+  background: rgb(254 192 10 / 0.12);
+}
+
+.cell img {
+  max-width: 80%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.cell:hover img {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cell,
+  .cell img { transition: none; }
+}

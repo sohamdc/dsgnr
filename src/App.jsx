@@ -3,6 +3,7 @@ import Hero from './sections/Hero'
 import ContactForm from './sections/ContactForm'
 import Office from './sections/Office'
 import Stats from './sections/Stats'
+import Brands from './sections/Brands'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <ContactForm />
         <Office />
         <Stats />
+        <Brands />
       </main>
     </>
   )
