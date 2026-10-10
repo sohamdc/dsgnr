@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { navLinks } from '../data/content'
-import logo from '../assets/logo.svg'
+import logo from '../assets/Logo.svg'
 import styles from './Header.module.css'
 
 function Header() {
