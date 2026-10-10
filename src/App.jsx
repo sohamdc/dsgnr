@@ -5,6 +5,7 @@ import Office from './sections/Office'
 import Stats from './sections/Stats'
 import Brands from './sections/Brands'
 import CtaBanner from './sections/CtaBanner'
+import Footer from './sections/Footer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Stats />
         <Brands />
         <CtaBanner />
+        <Footer />
       </main>
     </>
   )

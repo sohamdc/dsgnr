@@ -1,0 +1,132 @@
+
+.footer {
+  margin-top: calc(70 * var(--u));
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+
+.footer :focus-visible {
+  outline-color: var(--color-white);
+}
+
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 906fr) minmax(0, 258fr) minmax(0, 364fr);
+  align-items: start;
+  padding-top: calc(116 * var(--u));
+}
+
+.logo {
+  display: block;
+  width: calc(120 * var(--u));
+  line-height: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+
+.description {
+  max-width: calc(650 * var(--u));
+  margin: calc(57 * var(--u)) 0 calc(69 * var(--u));
+  font-size: max(14px, calc(24 * var(--u)));
+  line-height: 1.5;
+}
+
+
+.emailBox {
+  display: flex;
+  align-items: center;
+  width: min(100%, calc(493 * var(--u)));
+  height: calc(80 * var(--u));
+  padding-left: calc(33 * var(--u));
+  border: 2px solid var(--color-gold);
+  color: var(--color-white);
+  font-size: max(14px, calc(24 * var(--u)));
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.emailBox img {
+  width: calc(30 * var(--u));
+  height: auto;
+  margin-right: calc(111 * var(--u));
+}
+
+.emailBox:hover {
+  border-color: var(--color-white);
+  color: var(--color-gold);
+}
+
+.column {
+  padding-top: calc(12 * var(--u));
+}
+
+.column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.columnTitle {
+  margin: 0 0 calc(20 * var(--u));
+  font-size: max(14px, calc(24 * var(--u)));
+  font-weight: 700;
+  line-height: 1.875;
+}
+
+.column a,
+.legal a {
+  color: var(--color-white);
+  font-size: max(14px, calc(24 * var(--u)));
+  text-decoration: none;
+}
+
+.column a {
+  line-height: 1.875;
+}
+
+.column a:hover,
+.legal a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: calc(100 * var(--u));
+  padding-bottom: calc(114 * var(--u));
+}
+
+.legal,
+.social {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legal { gap: calc(66 * var(--u)); }
+.social { gap: calc(48 * var(--u)); }
+
+.legal a { line-height: calc(27 * var(--u)); }
+
+.social a {
+  display: block;
+  line-height: 0;
+  transition: opacity 0.2s ease;
+}
+
+.social a:hover { opacity: 0.6; }
+
+.social img { height: auto; }
