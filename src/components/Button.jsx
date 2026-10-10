@@ -1,8 +1,18 @@
 import styles from './Button.module.css'
 
-function Button({ children, className = '', ...props }) {
+function Button({ children, className = '', href, ...props }) {
+  const classes = `${styles.button} ${className}`
+
+  if (href) {
+    return (
+      <a className={classes} href={href} {...props}>
+        {children}
+      </a>
+    )
+  }
+
   return (
-    <button className={`${styles.button} ${className}`} {...props}>
+    <button className={classes} {...props}>
       {children}
     </button>
   )
