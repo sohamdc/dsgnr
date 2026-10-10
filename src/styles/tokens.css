@@ -1,0 +1,14 @@
+:root {
+  --color-ink: #101010;
+ 
+    
+  --font-main: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+
+  --container-max: 1728px;
+  --gutter: clamp(20px, 5.787vw, 100px);
+
+
+  --fs-hero: clamp(40px, 5.787vw, 100px);
+  --lh-hero: 1.1;
+}
