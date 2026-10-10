@@ -1,0 +1,15 @@
+
+.stats {
+  margin-top: calc(196 * var(--u));
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0;
+  padding: calc(59 * var(--u)) 0 calc(58 * var(--u));
+  list-style: none;
+}
