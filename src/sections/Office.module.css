@@ -1,0 +1,94 @@
+/* Contact ends at 1976 and the heading starts at 2128 */
+.office {
+  padding-top: calc(152 * var(--u));
+}
+
+/* 44px heading, photo starts at 2273 */
+.photoWrap {
+  position: relative;
+  margin-top: calc(101 * var(--u));
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Figma: 381 x 437 card, 44px from the photo's left, 178px from its top.
+   Position and width are percentages of the photo, so the card scales with it. */
+.card {
+  position: absolute;
+  top: 26.29%;
+  left: 2.88%;
+  width: 24.93%;
+  min-height: calc(437 * var(--u));
+  padding: calc(102 * var(--u)) calc(45 * var(--u)) calc(55 * var(--u));
+  background: var(--color-white);
+}
+
+.city {
+  margin: 0 0 calc(17 * var(--u));
+  font-size: max(18px, calc(32 * var(--u)));
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.address {
+  font-style: normal;
+}
+
+.street,
+.contact {
+  margin: 0;
+  font-size: max(14px, calc(24 * var(--u)));
+  line-height: 1.25;
+}
+
+.street {
+  margin-bottom: calc(22 * var(--u));
+  color: var(--color-ink-muted);
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.email {
+  color: var(--color-link);
+}
+
+.directions {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(16 * var(--u));
+  margin-top: calc(53 * var(--u));
+  font-size: max(12px, calc(20 * var(--u)));
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.directions svg {
+  width: max(12px, calc(20 * var(--u)));
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.directions:hover,
+.directions:focus-visible {
+  text-decoration: underline;
+}
+
+.directions:hover svg {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .directions svg { transition: none; }
+}
