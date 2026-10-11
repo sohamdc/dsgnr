@@ -1,5 +1,5 @@
 import { footerContent } from '../data/content'
-import logo from '../assets/logo.svg'
+import logo from '../assets/Logo.svg'
 import styles from './Footer.module.css'
 
 function Footer() {

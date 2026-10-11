@@ -1,5 +1,5 @@
 import { ctaContent } from '../data/content'
-import logo from '../assets/logo.svg'
+import logo from '../assets/Logo.svg'
 import Button from '../components/Button'
 import Reveal from '../components/Reveal'
 import styles from './CtaBanner.module.css'
