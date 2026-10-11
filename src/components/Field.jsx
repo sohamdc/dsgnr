@@ -1,14 +1,16 @@
+import { AnimatePresence, m } from 'framer-motion'
+import Reveal from './Reveal'
 import styles from './Field.module.css'
 
-// One input or textarea with a floating label and an error message linked for screen readers.
-function Field({ name, label, type = 'text', value, error, onChange, onBlur, autoComplete }) {
+
+function Field({ name, label, type = 'text', value, error, onChange, onBlur, autoComplete, revealDelay = 0 }) {
   const id = `field-${name}`
   const errorId = `${id}-error`
   const isTextarea = type === 'textarea'
   const Control = isTextarea ? 'textarea' : 'input'
 
   return (
-    <div className={`${styles.field} ${isTextarea ? styles.textarea : ''}`}>
+    <Reveal delay={revealDelay} className={`${styles.field} ${isTextarea ? styles.textarea : ''}`}>
       <Control
         id={id}
         name={name}
@@ -24,17 +26,29 @@ function Field({ name, label, type = 'text', value, error, onChange, onBlur, aut
         aria-describedby={error ? errorId : undefined}
         className={styles.control}
       />
-      {/* The label comes after the control so CSS can react to its focus and filled state */}
       <label htmlFor={id} className={styles.label}>
         {label}
         <span aria-hidden="true">*</span>
       </label>
-      {error && (
-        <p id={errorId} className={styles.error} role="alert">
-          {error}
-        </p>
-      )}
-    </div>
+
+    
+      <AnimatePresence>
+        {error && (
+          <m.p
+            key="error"
+            id={errorId}
+            className={styles.error}
+            role="alert"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {error}
+          </m.p>
+        )}
+      </AnimatePresence>
+    </Reveal>
   )
 }
 

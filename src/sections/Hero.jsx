@@ -1,7 +1,18 @@
+import { m } from 'framer-motion'
 import { heroContent } from '../data/content'
 import shapes from '../assets/hero-shapes.svg'
 import mouse from '../assets/mouse.svg'
 import styles from './Hero.module.css'
+
+
+const handVariants = {
+  hidden: { opacity: 0, y: 48 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, delay: 0.25 + index * 0.12, ease: [0.2, 0.7, 0.2, 1] },
+  }),
+}
 
 function Hero() {
   return (
@@ -15,8 +26,18 @@ function Hero() {
           </h1>
 
           <div className={styles.hands}>
-            {heroContent.hands.map((hand) => (
-              <img key={hand.id} src={hand.src} alt={hand.alt} width="245" height="388" />
+            {heroContent.hands.map((hand, index) => (
+              <m.img
+                key={hand.id}
+                src={hand.src}
+                alt={hand.alt}
+                width="245"
+                height="388"
+                variants={handVariants}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+              />
             ))}
           </div>
         </div>

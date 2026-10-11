@@ -1,7 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
+import { m } from 'framer-motion'
 import { navLinks } from '../data/content'
-import logo from '../assets/Logo.svg'
+import logo from '../assets/logo.svg'
 import styles from './Header.module.css'
+
+
+const listVariants = {
+  closed: { transition: { staggerChildren: 0.04, staggerDirection: -1 } },
+  open: { transition: { staggerChildren: 0.07, delayChildren: 0.12 } },
+}
+
+const itemVariants = {
+  closed: { opacity: 0, y: 20 },
+  open: { opacity: 1, y: 0 },
+}
 
 function Header() {
   const [open, setOpen] = useState(false)
@@ -48,15 +60,15 @@ function Header() {
       </div>
 
       <nav id="site-menu" className={styles.menu} data-open={open} aria-label="Main">
-        <ul>
+        <m.ul variants={listVariants} initial={false} animate={open ? 'open' : 'closed'}>
           {navLinks.map((link) => (
-            <li key={link.label}>
+            <m.li key={link.label} variants={itemVariants}>
               <a href={link.href} onClick={() => setOpen(false)}>
                 {link.label}
               </a>
-            </li>
+            </m.li>
           ))}
-        </ul>
+        </m.ul>
       </nav>
     </header>
   )

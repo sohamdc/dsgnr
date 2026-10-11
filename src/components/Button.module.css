@@ -11,13 +11,14 @@
   font-size: max(16px, calc(28 * var(--u)));
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, translate 0.2s ease;
 }
 
 
 .button:hover:not(:disabled) {
   background: var(--color-yellow);
   color: var(--color-ink);
+    translate: 0 -2px;
 }
 
 .button:disabled {

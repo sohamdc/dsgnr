@@ -75,6 +75,18 @@
   transform: translateY(4px);
 }
 
+@keyframes bob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 8px; }
+}
+
+.scroll img {
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll img { animation: none; }
+}
 @media (max-width: 900px) {
   .title { top: 30%; width: 80%; }
   .hands { left: auto; right: 3%; width: 54%; }

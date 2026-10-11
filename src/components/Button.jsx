@@ -1,20 +1,23 @@
+import { m } from 'framer-motion'
 import styles from './Button.module.css'
+
 
 function Button({ children, className = '', href, ...props }) {
   const classes = `${styles.button} ${className}`
+  const tap = props.disabled ? undefined : { scale: 0.97 }
 
   if (href) {
     return (
-      <a className={classes} href={href} {...props}>
+      <m.a className={classes} href={href} whileTap={tap} {...props}>
         {children}
-      </a>
+      </m.a>
     )
   }
 
   return (
-    <button className={classes} {...props}>
+    <m.button className={classes} whileTap={tap} {...props}>
       {children}
-    </button>
+    </m.button>
   )
 }
 

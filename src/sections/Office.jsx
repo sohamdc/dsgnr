@@ -1,3 +1,4 @@
+import Reveal from '../components/Reveal'
 import { officeContent as office } from '../data/content'
 import SectionHeading from '../components/SectionHeading'
 import styles from './Office.module.css'
@@ -8,7 +9,7 @@ function Office() {
       <div className="container">
         <SectionHeading id="office-title">{office.heading}</SectionHeading>
 
-        <div className={styles.photoWrap}>
+        <Reveal className={styles.photoWrap}>
           <img
             className={styles.photo}
             src={office.photo.src}
@@ -51,7 +52,7 @@ function Office() {
               </svg>
             </a>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

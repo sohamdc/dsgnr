@@ -1,18 +1,26 @@
+import { AnimatePresence, m } from 'framer-motion'
 import { contactContent } from '../data/content'
 import { useContactForm } from '../hooks/useContactForm'
 import SectionHeading from '../components/SectionHeading'
+import Reveal from '../components/Reveal'
 import Field from '../components/Field'
 import Button from '../components/Button'
 import styles from './ContactForm.module.css'
 
+const statusMessages = {
+  success: contactContent.successMessage,
+  error: contactContent.errorMessage,
+}
+
 function ContactForm() {
   const { values, errors, status, handleChange, handleBlur, handleSubmit } = useContactForm()
   const isSending = status === 'sending'
+  const statusMessage = statusMessages[status]
 
   return (
     <section id="contact" className={styles.contact} aria-labelledby="contact-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.card}>
+        <Reveal className={styles.card}>
           <img
             src={contactContent.illustration.src}
             alt={contactContent.illustration.alt}
@@ -21,7 +29,7 @@ function ContactForm() {
             loading="lazy"
             decoding="async"
           />
-        </div>
+        </Reveal>
 
         <div>
           <div className={styles.headingBox}>
@@ -31,7 +39,7 @@ function ContactForm() {
           </div>
 
           <form className={styles.form} onSubmit={handleSubmit} noValidate aria-busy={isSending}>
-            {contactContent.fields.map((field) => (
+            {contactContent.fields.map((field, index) => (
               <Field
                 key={field.name}
                 {...field}
@@ -39,6 +47,7 @@ function ContactForm() {
                 error={errors[field.name]}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                revealDelay={index * 0.09}
               />
             ))}
 
@@ -46,10 +55,21 @@ function ContactForm() {
               {isSending ? contactContent.sendingLabel : contactContent.submitLabel}
             </Button>
 
-            {/* Always in the page so screen readers announce the text when it appears */}
+         
             <p className={styles.status} data-state={status} role="status" aria-live="polite">
-              {status === 'success' && contactContent.successMessage}
-              {status === 'error' && contactContent.errorMessage}
+              <AnimatePresence mode="wait">
+                {statusMessage && (
+                  <m.span
+                    key={status}
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    {statusMessage}
+                  </m.span>
+                )}
+              </AnimatePresence>
             </p>
           </form>
         </div>

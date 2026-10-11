@@ -1,5 +1,6 @@
 import { brandsContent } from '../data/content'
 import SectionHeading from '../components/SectionHeading'
+import Reveal from '../components/Reveal'
 import styles from './Brands.module.css'
 
 function Brands() {
@@ -11,8 +12,8 @@ function Brands() {
         </div>
 
         <ul className={styles.grid}>
-          {brandsContent.logos.map((logo) => (
-            <li key={logo.id} className={styles.cell}>
+          {brandsContent.logos.map((logo, index) => (
+            <Reveal as="li" key={logo.id} className={styles.cell} delay={(index % 4) * 0.08}>
               <img
                 src={logo.src}
                 alt={logo.name}
@@ -20,7 +21,7 @@ function Brands() {
                 decoding="async"
                 style={{ '--w': logo.width }}
               />
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>

@@ -59,7 +59,9 @@
 .status[data-state='success'] { color: var(--color-success); }
 .status[data-state='error'] { color: var(--color-error); }
 
-
+.status span {
+  display: block; 
+}
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: minmax(0, 1fr);
