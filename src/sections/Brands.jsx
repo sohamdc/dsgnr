@@ -18,7 +18,7 @@ function Brands() {
                 alt={logo.name}
                 loading="lazy"
                 decoding="async"
-                style={{ width: `calc(${logo.width} * var(--u))` }}
+                style={{ '--w': logo.width }}
               />
             </li>
           ))}

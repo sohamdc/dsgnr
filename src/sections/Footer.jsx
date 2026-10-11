@@ -51,7 +51,7 @@ function Footer() {
             <li key={item.id}>
               {/* Icon-only links need an accessible name, so aria-label */}
               <a href={item.href} aria-label={item.label} target="_blank" rel="noopener noreferrer">
-                <img src={item.icon} alt="" style={{ width: `calc(${item.width} * var(--u))` }} />
+                <img src={item.icon} alt="" style={{ '--w': item.width }} />
               </a>
             </li>
           ))}

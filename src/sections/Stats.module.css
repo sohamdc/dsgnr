@@ -13,3 +13,12 @@
   padding: calc(59 * var(--u)) 0 calc(58 * var(--u));
   list-style: none;
 }
+
+@media (max-width: 900px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 24px;
+    padding: 48px 0;
+  }
+}

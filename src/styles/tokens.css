@@ -25,4 +25,20 @@
 
   --fs-hero: clamp(40px, 5.787vw, 100px);
   --lh-hero: 1.1;
+
+
+}
+
+
+@media (max-width: 900px) {
+  :root {
+    --u: max(0.5px, calc(100vw / 1100));
+    --fs-hero: clamp(44px, 8vw, 64px);
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fs-hero: clamp(34px, 10vw, 44px);
+  }
 }

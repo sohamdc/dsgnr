@@ -68,3 +68,44 @@
   min-width: 0;
   height: auto;
 }
+
+@media (max-width: 900px) {
+  .banner {
+    margin-top: calc(160 * var(--u));
+    padding-top: 48px;
+  }
+
+  .bigLogo {
+    position: static;
+    width: min(70vw, 360px);
+    margin-left: -6%;
+  }
+
+  .canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    height: auto;
+    padding: 24px var(--gutter) 0;
+  }
+
+  .heading {
+    position: static;
+    font-size: clamp(24px, 5vw, 36px);
+  }
+
+  .canvas .button {
+    position: static;
+    width: auto;
+    height: 64px;
+    padding-inline: 40px;
+    font-size: 18px;
+  }
+
+  .hands {
+    position: static;
+    align-self: flex-end;
+    width: min(100%, 369px);
+  }
+}

@@ -129,4 +129,48 @@
 
 .social a:hover { opacity: 0.6; }
 
-.social img { height: auto; }
+.social img { width: calc(var(--w) * var(--u));
+  height: auto; }
+
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 48px;
+  }
+
+  .brand { grid-column: 1 / -1; }
+  .column { padding-top: 0; }
+  .description { max-width: 520px; }
+
+  .emailBox {
+    width: 100%;
+    max-width: 420px;
+    height: 64px;
+    padding-left: 24px;
+    font-size: 18px;
+  }
+
+  .emailBox img {
+    width: 28px;
+    margin-right: 32px;
+  }
+
+  .bottom {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .social img { width: calc(var(--w) * 0.85px); }
+}
+
+@media (max-width: 600px) {
+  .top { grid-template-columns: minmax(0, 1fr); }
+
+  .description,
+  .columnTitle,
+  .column a,
+  .legal a { font-size: 16px; }
+}
