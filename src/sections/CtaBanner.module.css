@@ -72,13 +72,16 @@
 @media (max-width: 900px) {
   .banner {
     margin-top: calc(160 * var(--u));
-    padding-top: 48px;
   }
 
+ 
   .bigLogo {
-    position: static;
-    width: min(70vw, 360px);
-    margin-left: -6%;
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    width: min(60vw, 320px);
+    margin: 48px 0 0 var(--gutter);
   }
 
   .canvas {

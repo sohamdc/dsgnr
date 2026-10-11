@@ -77,11 +77,14 @@
 
 @media (max-width: 900px) {
   .title { top: 30%; width: 80%; }
-  .hands { width: 55%; }
+  .hands { left: auto; right: 3%; width: 54%; }
 }
 
 @media (max-width: 600px) {
   .stage { min-height: 520px; }
   .title { top: 22%; width: 88%; }
-  .hands { left: 50%; width: 82%; transform: translateX(-50%); }
+  .hands { left: 50%; right: auto; width: 82%; transform: translateX(-50%); }
+
+
+  .scroll { display: none; }
 }
