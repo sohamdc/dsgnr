@@ -73,10 +73,10 @@ src/
 
 
 - **Mobile (375px)**(open in mobile:https://dsgnr-sooty.vercel.app/  )
-| ![Mobile View 1](./src/assets/Screenshots/Mobile/Screenshot_M1.png) | ![Mobile View 2](./src/assets/Screenshots/Mobile/Screenshot_M2.png) |
-!![Mobile View 3](./src/assets/Screenshots/Mobile/Screenshot_M3.png) | ![Mobile View 4](./src/assets/Screenshots/Mobile/Screenshot_M4.png) |
-![Mobile View 5](./src/assets/Screenshots/Mobile/Screenshot_M5.png) | ![Mobile View 5](./src/assets/Screenshots/Mobile/Screenshot_M5.png) |
-![Mobile View 7](./src/assets/Screenshots/Mobile/Screenshot_M7.png) |
+| ![Mobile View 1](./src/assets/Screenshots/Mobile/Screenshot_M1.jpg) | ![Mobile View 2](./src/assets/Screenshots/Mobile/Screenshot_M2.jpg) |
+!![Mobile View 3](./src/assets/Screenshots/Mobile/Screenshot_M3.jpg) | ![Mobile View 4](./src/assets/Screenshots/Mobile/Screenshot_M4.jpg) |
+![Mobile View 5](./src/assets/Screenshots/Mobile/Screenshot_M5.jpg) | ![Mobile View 5](./src/assets/Screenshots/Mobile/Screenshot_M5.jpg) |
+![Mobile View 7](./src/assets/Screenshots/Mobile/Screenshot_M7.jpg) |
 
 ## What I would improve with more time
 
