@@ -66,10 +66,10 @@ src/
 ## Screenshots
 
 - **Desktop (1728px)**  
-| ![Desktop View 1](./src/Screenshots/Desktop/Screenshot_D1.png) | ![Desktop View 2](./src/Screenshots/Desktop/Screenshot_D2.png) |
-![Desktop View 3](./src/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 4](./src/Screenshots/Desktop/Screenshot_D4.png) |
-![Desktop View 5](./src/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 6](./src/Screenshots/Desktop/Screenshot_D4.png) |
-![Desktop View 7](./src/Screenshots/Desktop/Screenshot_D4.png) |
+| ![Desktop View 1](./src/assets/Screenshots/Desktop/Screenshot_D1.png) | ![Desktop View 2](./src/assets/Screenshots/Desktop/Screenshot_D2.png) |
+![Desktop View 3](./src/assets/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 4](./src/assets/Screenshots/Desktop/Screenshot_D4.png) |
+![Desktop View 5](./src/assets/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 6](./src/assets/Screenshots/Desktop/Screenshot_D4.png) |
+![Desktop View 7](./src/assets/Screenshots/Desktop/Screenshot_D4.png) |
 
 
 
