@@ -9,9 +9,8 @@ A responsive Contact page for the design agency **dsgnr.**, built in React from 
 
 **Lighthouse (live link, mobile mode)**
 
-![Lighthouse mobile report](docs/screenshots/lighthouse-mobile.png)
+![Lighthouse mobile report](./src/assets/Screenshots/performance.png)
 
-Performance: **** · Accessibility: **___** 
 
 ## Run locally
 
@@ -68,13 +67,16 @@ src/
 - **Desktop (1728px)**  
 | ![Desktop View 1](./src/assets/Screenshots/Desktop/Screenshot_D1.png) | ![Desktop View 2](./src/assets/Screenshots/Desktop/Screenshot_D2.png) |
 ![Desktop View 3](./src/assets/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 4](./src/assets/Screenshots/Desktop/Screenshot_D4.png) |
-![Desktop View 5](./src/assets/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 6](./src/assets/Screenshots/Desktop/Screenshot_D4.png) |
-![Desktop View 7](./src/assets/Screenshots/Desktop/Screenshot_D4.png) |
+![Desktop View 5](./src/assets/Screenshots/Desktop/Screenshot_D5.png) | ![Desktop View 6](./src/assets/Screenshots/Desktop/Screenshot_D6.png) |
+![Desktop View 7](./src/assets/Screenshots/Desktop/Screenshot_D7.png) |
 
 
 
-- **Mobile (375px)**
-
+- **Mobile (375px)**(open in mobile:https://dsgnr-sooty.vercel.app/  )
+| ![Mobile View 1](./src/assets/Screenshots/Mobile/Screenshot_M1.png) | ![Mobile View 2](./src/assets/Screenshots/Mobile/Screenshot_M2.png) |
+!![Mobile View 3](./src/assets/Screenshots/Mobile/Screenshot_M3.png) | ![Mobile View 4](./src/assets/Screenshots/Mobile/Screenshot_M4.png) |
+![Mobile View 5](./src/assets/Screenshots/Mobile/Screenshot_M5.png) | ![Mobile View 5](./src/assets/Screenshots/Mobile/Screenshot_M5.png) |
+![Mobile View 7](./src/assets/Screenshots/Mobile/Screenshot_M7.png) |
 
 ## What I would improve with more time
 
