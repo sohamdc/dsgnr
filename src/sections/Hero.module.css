@@ -25,7 +25,7 @@
   left: 0.013%;
   width: 92.7%;
   height: 97.32%;
-  object-fit: cover;
+  /* object-fit: cover; */
   object-position: left top;
   pointer-events: none;
 }
@@ -90,6 +90,7 @@
 @media (max-width: 900px) {
   .title { top: 30%; width: 80%; }
   .hands { left: auto; right: 3%; width: 54%; }
+    .shapes { top: 0; left: 0; width: 100%; height: 100%; }
 }
 
 @media (max-width: 600px) {
