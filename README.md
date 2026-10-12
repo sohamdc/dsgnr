@@ -5,11 +5,7 @@ A responsive Contact page for the design agency **dsgnr.**, built in React from 
 - **Live:** https://dsgnr-sooty.vercel.app/
 - **Repository:** https://github.com/sohamdc/dsgnr
 
-## Screenshots
 
-| Desktop (1728px) | Mobile (375px) |
-|---|---|
-| ![Desktop]() | ![Mobile]() |
 
 **Lighthouse (live link, mobile mode)**
 
@@ -29,15 +25,14 @@ npm run preview
 
 ## Tech choices and why
 
-| Choice | Why |
-|---|---|
-| **React + Vite** | Required by the brief. Vite gives instant dev reloads and a small, code-split production build. |
-| **CSS Modules**  Styles are scoped to each component, so there are no class-name clashes and Plain CSS also makes it easier to match Figma values exactly |
-| **A "design unit" (`--u`)** | The Figma frame is 1728px wide. --u equals 1px at 1728 and shrinks with the screen width, so every Figma size scales together. Widths use CSS grid fractions so nothing overflows sideways. |
-| **Content in `src/data/content.js`** | All text, links, stats, logos and field definitions are in one file and are rendered with `map()`. |
-| **Small reusable components** | `Field` , `Button`, `SectionHeading`, `Reveal`, `StatItem`. The form logic is in the `useContactForm` hook and the rules are in `utils/validators.js`. |
-| **Framer Motion (LazyMotion)** | Light scroll reveals, staggered hands, menu links and form messages. The lazy build adds about 28 KB gzipped and loads after first paint. Only `opacity` and `translate` are animated. |
-| **WebP and SVG assets** | Photos are WebP, icons and logos are SVG. The hand images came out of Figma as 4–7 MB SVG wrappers around huge PNGs, and are now 8–26 KB each. |
+
+- **React + Vite** : Required by the brief. Vite gives instant dev reloads and a small, code-split production build. 
+- **CSS Modules** : Styles are scoped to each component, so there are no class-name clashes and Plain CSS also makes it easier to match Figma values exactly.
+- **A "design unit" (`--u`)**:  The Figma frame is 1728px wide. --u equals 1px at 1728 and shrinks with the screen width, so every Figma size scales together. Widths use CSS grid fractions so nothing overflows sideways. 
+- **Content in `src/data/content.js`**  All text, links, stats, logos and field definitions are in one file and are rendered with `map()`. 
+-**Small reusable components** : `Field` , `Button`, `SectionHeading`, `Reveal`, `StatItem`. The form logic is in the `useContactForm` hook and the rules are in `utils/validators.js`. 
+-**Framer Motion (LazyMotion)** : Light scroll reveals, staggered hands, menu links and form messages. The lazy build adds about 28 KB gzipped and loads after first paint. Only `opacity` and `translate` are animated. 
+- **WebP and SVG assets** : Photos are WebP, icons and logos are SVG. The hand images came out of Figma as 4–7 MB SVG wrappers around huge PNGs, and are now 8–26 KB each. 
 
 ## Decisions where Figma wasn't specific
 
@@ -67,6 +62,19 @@ src/
   styles/       tokens.css (colors, sizes, --u), global.css
   utils/        validators.js
 ```
+
+## Screenshots
+
+- **Desktop (1728px)**  
+| ![Desktop View 1](./src/Screenshots/Desktop/Screenshot_D1.png) | ![Desktop View 2](./src/Screenshots/Desktop/Screenshot_D2.png) |
+![Desktop View 3](./src/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 4](./src/Screenshots/Desktop/Screenshot_D4.png) |
+![Desktop View 5](./src/Screenshots/Desktop/Screenshot_D3.png) | ![Desktop View 6](./src/Screenshots/Desktop/Screenshot_D4.png) |
+![Desktop View 7](./src/Screenshots/Desktop/Screenshot_D4.png) |
+
+
+
+- **Mobile (375px)**
+
 
 ## What I would improve with more time
 
